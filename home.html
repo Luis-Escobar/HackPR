@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Home page</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header>
+			<h1 class="text-center">Name of the app</h1>
+
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Home</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">Profile</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">ICOM5007</a>
+									</li>
+									<li>
+										<a href="#">CCOM4009</a>
+									</li>
+									<li>
+										<a href="#">ICOM4215</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a onclick="">Sign out</a>
+							</li>
+						</ul>
+						<form class="navbar-form navbar-right" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-default">
+								Submit
+							</button>
+						</form>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9" role="main">
+					<h1> Top Posts </h1>
+					<div>
+						<ul class="media-list">
+							<li class="media">
+								<a class="pull-left" href="#" > <img class="media-object" src="css/images/user.jpg" style="width: 64;height: 64"/> </a>
+								<div class="media-body">
+									<h4 class="media-heading">Header de un post o pregunta</h4>
+									<p>
+										Sample text para breve descripcion del post. O un preview del post.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Find a course
+						</div>
+						<div class="panel-body">
+							<select class="form-control" id="university">
+								<option value="none">Select University</option>
+								<option value="one">One</option>
+								<option value="two">Two</option>
+								<option value="three">Three</option>
+								<option value="four">Four</option>
+								<option value="five">Five</option>
+							</select>
+							
+							<select class="form-control" id="department">
+								<option value="none">Select Department</option>
+								<option value="one">One</option>
+								<option value="two">Two</option>
+								<option value="three">Three</option>
+								<option value="four">Four</option>
+								<option value="five">Five</option>
+							</select>
+							
+							<select class="form-control" id="course">
+								<option value="none">Select Course</option>
+								<option value="one">One</option>
+								<option value="two">Two</option>
+								<option value="three">Three</option>
+								<option value="four">Four</option>
+								<option value="five">Five</option>
+							</select>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
