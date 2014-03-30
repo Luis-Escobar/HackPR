@@ -21,9 +21,9 @@
 		<script src="js/jquery.cycle2.center.js"></script>
 		<script src="js/jquery.rateit.min.js"></script>
 		<script src="appjs/application.js"></script>
-		<script src="js/accounting.js"></script>
 		<script type="text/javascript" src="js/sha.js"></script>
 		<script type="text/javascript" src="js/parse.js"></script>
+		<script type="text/javascript" src="bootstrap-3.1.1-dist/js/bootstrap.js"></script>
 
 	</head>
 
@@ -33,67 +33,138 @@
 
 		<div id="lrd-login">
 			<h1 class="text-center">Name of the app</h1>
+
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Home</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">Profile</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">ICOM5007</a>
+									</li>
+									<li>
+										<a href="#">CCOM4009</a>
+									</li>
+									<li>
+										<a href="#">ICOM4215</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a onclick="">Sign out</a>
+							</li>
+						</ul>
+						<form class="navbar-form navbar-right" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-default">
+								Submit
+							</button>
+						</form>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+
+			<ul class="nav nav-tabs">
+				<li>
+					<a href="login.html">Login</a>
+				</li>
+				<li class="active">
+					<a href="#">Signup</a>
+				</li>
+			</ul>
 			<br />
-			<div class="input-group">
-				<span class="input-group-addon">Username*</span>
-				<input type="text" class="form-control" placeholder="Some_user">
+
+			<div style="padding-left: 200px; padding-right: 200px">
+				<div class="input-group">
+					<span class="input-group-addon">Username*</span>
+					<input type="text" class="form-control" placeholder="Some_user">
+				</div>
+				<br />
+				<div class="input-group">
+					<span class="input-group-addon">First name</span>
+					<input type="text" class="form-control" placeholder="Some_first_name">
+				</div>
+				<br />
+				<div class="input-group">
+					<span class="input-group-addon">Last name</span>
+					<input type="text" class="form-control" placeholder="Some_last_name">
+				</div>
+				<br />
+				<div class="input-group">
+					<span class="input-group-addon">Email*</span>
+					<input type="email" class="form-control" placeholder="Some_email">
+				</div>
+				<br />
+				<div class="input-group">
+					<span class="input-group-addon">Password*</span>
+					<input type="password" class="form-control">
+				</div>
+				<br />
+				<div class="input-group">
+					<span class="input-group-addon">Re-type Password*</span>
+					<input type="password" class="form-control">
+				</div>
+				<br />
+				<div class="input-group">
+					<span class="input-group-addon">Phone Number</span>
+					<input type="text" class="form-control" placeholder="Some_phone_number">
+				</div>
+				<br />
+				<div class="input-group">
+					<span class="input-group-addon">University name*</span>
+					<select id="lrd-universityName" class="form-control">
+						<option value="University of Puerto Rico, Mayaguez" title="University of Puerto Rico, Mayaguez">University of Puerto Rico, Mayaguez</option>
+						<option value="University of Puerto Rico, Rio Piedras" title="University of Puerto Rico, Rio Piedras">University of Puerto Rico, Rio Piedras</option>
+					</select>
+				</div>
+				<br />
+				<div class="input-group">
+					<span class="input-group-addon">Department*</span>
+					<select id="lrd-department" class="form-control">
+						<option value="ICOM" title="ICOM">ICOM</option>
+						<option value="CCOM" title="CCOM">CCOM</option>
+					</select>
+				</div>
+				<br />
+				<table class="table">
+					<tr>
+						<td class="active"><img id="lrd-signupUploadPicture1Pic" src="images/Unknown-person_80x80.gif" style="height: 80px; width: 80px"/></td>
+						<td class="active">
+						<br />
+						<input type="file" id="lrd-signupUploadPicture1" name="uploadpicture" onchange="upload(this.files[0],'lrd-signupUploadPicture1Pic')" >
+						</td>
+					</tr>
+				</table>
 			</div>
-			<br />
-			<div class="input-group">
-				<span class="input-group-addon">First name</span>
-				<input type="text" class="form-control" placeholder="Some_first_name">
+			<div align="center">
+				<button type="button" class="btn btn-primary" onclick="">
+					Done
+				</button>
+				<button type="button" class="btn btn-danger" onclick="">
+					Cancel
+				</button>
 			</div>
-			<br />
-			<div class="input-group">
-				<span class="input-group-addon">Last name</span>
-				<input type="text" class="form-control" placeholder="Some_last_name">
-			</div>
-			<br />
-			<div class="input-group">
-				<span class="input-group-addon">Email*</span>
-				<input type="email" class="form-control" placeholder="Some_email">
-			</div>
-			<br />
-			<div class="input-group">
-				<span class="input-group-addon">Password*</span>
-				<input type="password" class="form-control">
-			</div>
-			<br />
-			<div class="input-group">
-				<span class="input-group-addon">Re-type Password*</span>
-				<input type="password" class="form-control">
-			</div>
-			<br />
-			<div class="input-group">
-				<span class="input-group-addon">Phone Number</span>
-				<input type="text" class="form-control" placeholder="Some_phone_number">
-			</div>
-			<br />
-			<div class="input-group">
-				<span class="input-group-addon">University name*</span>
-				<select id="lrd-universityName" class="form-control">
-					<option value="University of Puerto Rico, Mayaguez" title="University of Puerto Rico, Mayaguez">University of Puerto Rico, Mayaguez</option>
-					<option value="University of Puerto Rico, Rio Piedras" title="University of Puerto Rico, Rio Piedras">University of Puerto Rico, Rio Piedras</option>
-				</select>
-			</div>
-			<br />
-			<div class="input-group">
-				<span class="input-group-addon">Department*</span>
-				<select id="lrd-department" class="form-control">
-					<option value="ICOM" title="ICOM">ICOM</option>
-					<option value="CCOM" title="CCOM">CCOM</option>
-				</select>
-			</div>
-			<br />
-			<table class="table">
-				<tr>
-					<td class="active"><img id="lrd-signupUploadPicture1Pic" src="images/Unknown-person_80x80.gif" style="height: 80px; width: 80px"/></td>
-					<td class="active">
-					<br />
-					<input type="file" id="lrd-signupUploadPicture1" name="uploadpicture" onchange="upload(this.files[0],'lrd-signupUploadPicture1Pic')" >
-					</td>
-				</tr>
-			</table>
 
 		</div>
 
